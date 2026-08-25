@@ -17,14 +17,12 @@ export function Header({ onDonate, activePath = '/' }: { onDonate?: () => void; 
     if (onDonate) {
       onDonate()
     } else {
-      window.location.href = '/#contribute'
+      window.open('https://givebutter.com/jWjys8', '_blank', 'noopener,noreferrer')
     }
   }
 
   const links = [
     ['HOME', '/'],
-    ['VISION', '/#vision'],
-    ['MISSION', '/#mission'],
     ['CURRENT', '/#current'],
     ['FUTURE', '/#future'],
     ['HISTORY', '/#history'],
