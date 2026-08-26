@@ -27,6 +27,8 @@ export function Header({ onDonate, activePath = '/' }: { onDonate?: () => void; 
     ['FUTURE', '/#future'],
     ['HISTORY', '/#history'],
     ['ABOUT', '/about'],
+    ['BLOG 1', '/blog1'],
+    ['BLOG 2', '/blog2'],
     ['CONTACT', '/#contribute'],
   ]
 
