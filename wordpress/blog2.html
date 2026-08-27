@@ -91,17 +91,16 @@ button { color: inherit; font: inherit; }
 <main class="blog-page">
   <section class="blog-hero">
     <div>
-      <p class="eyebrow">WORLD HUNGER TEAM / INITIATIVES</p>
+      <p class="eyebrow">WORLD HUNGER TEAM </p>
       <h1>Combating<br /><em>world hunger.</em></h1>
     </div>
     <p>Explore our latest initiatives, simplified hydroponic growing systems, and the people bringing immediate relief to communities worldwide.</p>
   </section>
 
   <nav class="topic-nav" aria-label="Filter stories">
-    <button class="active">ALL INITIATIVES</button>
-    <button>HOME GROWING UNITS</button>
-    <button>RAINWATER HARVESTING</button>
-    <button>DOMESTIC FOOD SYSTEMS</button>
+    <button class="active">SYSTEM</button>
+    <button>PEOPLE</button>
+    <button>PERSPECTIVES</button>
   </nav>
 
   <article class="featured-story">
@@ -109,7 +108,7 @@ button { color: inherit; font: inherit; }
       <img src="https://lightpink-jellyfish-915487.hostingersite.com/wp-content/uploads/2026/08/CURRENT.jpeg" alt="" />
     </div>
     <div class="featured-copy">
-      <p class="eyebrow">HOME GROWING UNITS / August 26, 2026</p>
+      <p class="eyebrow">SYSTEM / August 26, 2026</p>
       <h2>Indoor Grow Tent</h2>
       <p>A compact, efficient solution for families to grow their own food year-round, regardless of weather conditions.</p>
       <a class="text-link" href="https://lightpink-jellyfish-915487.hostingersite.com/blog-page/">Read story <span>↗</span></a>
@@ -119,13 +118,13 @@ button { color: inherit; font: inherit; }
   <section class="story-section">
     <div class="story-section-head">
       <p class="eyebrow">THE JOURNAL</p>
-      <p>5 stories</p>
+      <p>4 stories</p>
     </div>
     <div class="story-grid">
       <article class="story-card">
         <div class="card-image"><img src="https://lightpink-jellyfish-915487.hostingersite.com/wp-content/uploads/2026/08/VISION.jpg" alt="" /></div>
         <div class="card-copy">
-          <p class="eyebrow">HOME GROWING UNITS / August 20, 2026</p>
+          <p class="eyebrow">SYSTEM / August 20, 2026</p>
           <h3>"She Shed" Backyard Garden</h3>
           <p>Transforming small backyard spaces into highly productive, easy-to-maintain personal gardens.</p>
           <a href="https://lightpink-jellyfish-915487.hostingersite.com/blog-page/" aria-label="Read &quot;She Shed&quot; Backyard Garden">Read story <span>↗</span></a>
@@ -135,7 +134,7 @@ button { color: inherit; font: inherit; }
       <article class="story-card">
         <div class="card-image"><img src="https://worldhungerteam.com/wp-content/uploads/2025/12/WhatsApp-Image-2025-12-30-at-1.02.12-AM.jpeg" alt="" /></div>
         <div class="card-copy">
-          <p class="eyebrow">RAINWATER HARVESTING / August 15, 2026</p>
+          <p class="eyebrow">SYSTEM / August 15, 2026</p>
           <h3>Home Harvester</h3>
           <p>Simple, effective rainwater catchment systems for residential use, turning rain into a reliable resource.</p>
           <a href="https://lightpink-jellyfish-915487.hostingersite.com/blog-page/" aria-label="Read Home Harvester">Read story <span>↗</span></a>
@@ -145,32 +144,78 @@ button { color: inherit; font: inherit; }
       <article class="story-card">
         <div class="card-image"><img src="https://worldhungerteam.com/wp-content/uploads/2025/12/klfqBYr7nGziwZTjQJMGzuYOzv4.png" alt="" /></div>
         <div class="card-copy">
-          <p class="eyebrow">RAINWATER HARVESTING / August 10, 2026</p>
+          <p class="eyebrow">SYSTEM / August 10, 2026</p>
           <h3>Commercial Harvester</h3>
           <p>Large-scale water catchment solutions designed for community gardens and agricultural cooperatives.</p>
           <a href="https://lightpink-jellyfish-915487.hostingersite.com/blog-page/" aria-label="Read Commercial Harvester">Read story <span>↗</span></a>
         </div>
       </article>
-
-      <article class="story-card">
-        <div class="card-image"><img src="https://worldhungerteam.com/wp-content/uploads/2025/12/WhatsApp-Image-2025-12-30-at-1.03.08-AM.jpeg" alt="" /></div>
-        <div class="card-copy">
-          <p class="eyebrow">DOMESTIC FOOD SYSTEMS / August 5, 2026</p>
-          <h3>Indoor Community Garden</h3>
-          <p>Bringing communities together to grow food collaboratively in repurposed indoor spaces.</p>
-          <a href="https://lightpink-jellyfish-915487.hostingersite.com/blog-page/" aria-label="Read Indoor Community Garden">Read story <span>↗</span></a>
-        </div>
-      </article>
-
-      <article class="story-card">
-        <div class="card-image"><img src="https://lightpink-jellyfish-915487.hostingersite.com/wp-content/uploads/2026/08/MISSION.jpg" alt="" /></div>
-        <div class="card-copy">
-          <p class="eyebrow">DOMESTIC FOOD SYSTEMS / August 1, 2026</p>
-          <h3>Walipini Underground Garden</h3>
-          <p>An innovative, climate-resilient approach to year-round farming using subterranean greenhouses.</p>
-          <a href="https://lightpink-jellyfish-915487.hostingersite.com/blog-page/" aria-label="Read Walipini Underground Garden">Read story <span>↗</span></a>
-        </div>
-      </article>
     </div>
   </section>
 </main>
+
+<script>
+  const articles = [
+    { category: 'SYSTEM', date: 'August 26, 2026', title: 'Indoor Grow Tent', excerpt: 'A compact, efficient solution for families to grow their own food year-round, regardless of weather conditions.', image: 'https://lightpink-jellyfish-915487.hostingersite.com/wp-content/uploads/2026/08/CURRENT.jpeg', featured: true },
+    { category: 'SYSTEM', date: 'August 20, 2026', title: '"She Shed" Backyard Garden', excerpt: 'Transforming small backyard spaces into highly productive, easy-to-maintain personal gardens.', image: 'https://lightpink-jellyfish-915487.hostingersite.com/wp-content/uploads/2026/08/VISION.jpg' },
+    { category: 'SYSTEM', date: 'August 15, 2026', title: 'Home Harvester', excerpt: 'Simple, effective rainwater catchment systems for residential use, turning rain into a reliable resource.', image: 'https://worldhungerteam.com/wp-content/uploads/2025/12/WhatsApp-Image-2025-12-30-at-1.02.12-AM.jpeg' },
+    { category: 'SYSTEM', date: 'August 10, 2026', title: 'Commercial Harvester', excerpt: 'Large-scale water catchment solutions designed for community gardens and agricultural cooperatives.', image: 'https://worldhungerteam.com/wp-content/uploads/2025/12/klfqBYr7nGziwZTjQJMGzuYOzv4.png' },
+    { category: 'PEOPLE', date: 'April 09, 2025', title: 'Dignity is part of the design', excerpt: 'Why every WHT project begins with listening to the people it is meant to serve.', image: 'https://lightpink-jellyfish-915487.hostingersite.com/wp-content/uploads/2026/08/MISSION.jpg' },
+    { category: 'PERSPECTIVES', date: 'February 14, 2025', title: 'Sustainability starts with what people can maintain', excerpt: 'The best solution is the one that fits a community\'s resources, rhythm, and future.', image: 'https://lightpink-jellyfish-915487.hostingersite.com/wp-content/uploads/2026/08/PUTALA.jpg' }
+  ];
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('.topic-nav button');
+    
+    function render(topic) {
+      buttons.forEach(btn => {
+        if (btn.textContent.trim() === topic) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+      
+      const filtered = topic === 'ALL INITIATIVES' ? articles : articles.filter(a => a.category === topic);
+      const featured = filtered.find(a => a.featured) || filtered[0];
+      const rest = filtered.filter(a => a !== featured);
+
+      const featuredContainer = document.querySelector('.featured-story');
+      if (featured) {
+        featuredContainer.style.display = 'grid';
+        featuredContainer.innerHTML = `
+          <div class="story-image">
+            <img src="${featured.image}" alt="" />
+          </div>
+          <div class="featured-copy">
+            <p class="eyebrow">${featured.category} / ${featured.date}</p>
+            <h2>${featured.title}</h2>
+            <p>${featured.excerpt}</p>
+            <a class="text-link" href="https://lightpink-jellyfish-915487.hostingersite.com/blog-page/">Read story <span>↗</span></a>
+          </div>
+        `;
+      } else {
+        featuredContainer.style.display = 'none';
+      }
+
+      document.querySelector('.story-section-head p:last-child').textContent = `${filtered.length} stories`;
+      
+      const grid = document.querySelector('.story-grid');
+      grid.innerHTML = rest.map(article => `
+        <article class="story-card">
+          <div class="card-image"><img src="${article.image}" alt="" /></div>
+          <div class="card-copy">
+            <p class="eyebrow">${article.category} / ${article.date}</p>
+            <h3>${article.title}</h3>
+            <p>${article.excerpt}</p>
+            <a href="https://lightpink-jellyfish-915487.hostingersite.com/blog-page/" aria-label="Read ${article.title.replace(/"/g, '&quot;')}">Read story <span>↗</span></a>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => render(btn.textContent.trim()));
+    });
+  });
+</script>
