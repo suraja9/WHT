@@ -1,36 +1,6 @@
-@import 'tailwindcss';
-@import 'tw-animate-css';
-@import 'shadcn/tailwind.css';
-
-@custom-variant dark (&:is(.dark *));
-
-@theme inline {
-  --font-sans: var(--font-lato), 'Arial', sans-serif;
-  --font-mono: var(--font-lato), monospace;
-  --font-serif: var(--font-montserrat), 'Arial', sans-serif;
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
-  --radius-sm: 0.15rem;
-  --radius-md: 0.25rem;
-  --radius-lg: 0.35rem;
-}
-
-:root { color-scheme: light; --background: #f5f3ed; --foreground: #222b25; --card: #ebe9df; --card-foreground: #222b25; --popover: #f5f3ed; --popover-foreground: #222b25; --primary: #254a35; --primary-foreground: #f5f3ed; --secondary: #dfe5df; --secondary-foreground: #254a35; --muted: #e8e6dc; --muted-foreground: #667168; --accent: #b66b45; --accent-foreground: #fffaf2; --border: #c9cec3; --input: #c9cec3; --ring: #254a35; }
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700;800&display=swap');
+:root { color-scheme: light; --background: #f5f3ed; --foreground: #222b25; --card: #ebe9df; --card-foreground: #222b25; --popover: #f5f3ed; --popover-foreground: #222b25; --primary: #254a35; --primary-foreground: #f5f3ed; --secondary: #dfe5df; --secondary-foreground: #254a35; --muted: #e8e6dc; --muted-foreground: #667168; --accent: #b66b45; --accent-foreground: #fffaf2; --border: #c9cec3; --input: #c9cec3; --ring: #254a35; --font-sans: 'Lato', 'Arial', sans-serif; --font-serif: 'Montserrat', 'Arial', sans-serif; }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; background: var(--background); }
 body { margin: 0; background: var(--background); color: var(--foreground); font-family: 'Lato', Arial, sans-serif; line-height: 1.55; }
@@ -57,17 +27,18 @@ button { color: inherit; font: inherit; }
 .donate-button:hover span { transform: translate(3px, -3px); }
 .current-menu { position: absolute; right: 3.5vw; top: 81px; width: min(760px, 90vw); padding: 1.4rem 1.6rem 1.7rem; background: var(--primary); color: var(--primary-foreground); box-shadow: 0 16px 30px rgba(35,45,35,.16); }.current-menu .eyebrow { color: #b9cdbb; }.current-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.2rem 2rem; margin-top: 1rem; }.current-grid strong { display: block; margin-bottom: .35rem; color: #d8e4d6; font: 700 .68rem 'Montserrat',sans-serif; letter-spacing: .08em; }.current-grid a { display: flex; justify-content: space-between; padding: .4rem 0; border-bottom: 1px solid rgba(255,255,255,.2); font: 600 .9rem 'Montserrat',sans-serif; }.current-grid a:hover { color: #d2a47e; }.current-menu small { color: #b9cdbb; font: .65rem 'Lato'; }
 .mobile-nav,.menu-toggle { display: none; }
-.doors-wrapper { border-bottom: 1px solid var(--border); }
+.doors-wrapper { border-bottom: 1px solid var(--border); background: var(--background); }
 .hero-container { display: flex; width: 100%; max-width: 1440px; margin: 0 auto; height: 68vh; min-height: 520px; border-bottom: 1px solid var(--border); }
 .hero-panel { position: relative; flex: 1; overflow: hidden; cursor: pointer; border-right: 1px solid var(--border); transition: flex 0.5s cubic-bezier(0.25, 1, 0.5, 1); }
 .hero-panel:last-child { border-right: none; }
 .hero-container .hero-panel:hover { flex: 2.2; z-index: 10; }
-.hero-panel-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.panel-label-bar { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,30,22,0.05) 40%, rgba(3,39,26,0.85) 100%); padding: 2rem; display: flex; flex-direction: column; justify-content: flex-end; transition: opacity 0.3s ease; }
-.panel-label-bar h2 { font: 700 1.8rem 'Montserrat', sans-serif; color: #ffffff; margin: 0; letter-spacing: -0.02em; }
-.panel-modal { position: absolute; inset: 0; opacity: 0; pointer-events: none; transition: opacity 0.35s ease-in-out; backdrop-filter: blur(8px); background-color: rgba(27, 28, 25, 0.88); display: flex; align-items: center; justify-content: center; padding: 2.5rem; z-index: 20; }
+.hero-panel-bg { position: absolute !important; top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important; width: 100% !important; height: 100% !important; max-width: none !important; max-height: none !important; margin: 0 !important; padding: 0 !important; object-fit: cover !important; z-index: 0 !important; }
+.panel-label-bar { position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 1; background: linear-gradient(180deg, rgba(20,30,22,0.05) 40%, rgba(3,39,26,0.85) 100%); padding: 2rem; display: flex; flex-direction: column; justify-content: flex-end; transition: opacity 0.3s ease; pointer-events: none; }
+.panel-label-bar h2 { font: 700 1.8rem 'Montserrat', sans-serif; color: #ffffff; margin: 0; letter-spacing: -0.02em; text-transform: uppercase; }
+.panel-modal { position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0; pointer-events: none; transition: opacity 0.35s ease-in-out; backdrop-filter: blur(8px); background-color: rgba(27, 28, 25, 0.88); display: flex; align-items: center; justify-content: center; padding: 2.5rem; z-index: 20; }
 .hero-panel:hover .panel-modal { opacity: 1; pointer-events: auto; }
-.section-wrap { position: relative; max-width: 1440px; margin: 0 auto; padding: 6rem 4vw; }.eyebrow { margin: 0; color: var(--accent); font: 700 .68rem 'Montserrat', sans-serif; letter-spacing: .14em; text-transform: uppercase; }.section-index { position: absolute; left: 1.5rem; top: 6.2rem; color: var(--muted-foreground); font: .65rem 'Montserrat',sans-serif; writing-mode: vertical-rl; }.intro { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; border-bottom: 1px solid var(--border); }
+.section-wrap { position: relative; max-width: 1440px; margin: 0 auto; padding: 6rem 4vw; background: var(--background); }
+.eyebrow { margin: 0; color: var(--accent); font: 700 .68rem 'Montserrat', sans-serif; letter-spacing: .14em; text-transform: uppercase; }.section-index { position: absolute; left: 1.5rem; top: 6.2rem; color: var(--muted-foreground); font: .65rem 'Montserrat',sans-serif; writing-mode: vertical-rl; }.intro { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; border-bottom: 1px solid var(--border); }
 .hero-title, .section-title { margin: .8rem 0 0; font: 700 clamp(2.5rem,5vw,3.5rem)/1 'Montserrat',sans-serif; letter-spacing: -.06em; }
 .hero-title { font-size: clamp(3rem,6vw,4.8rem); letter-spacing: -.07em; }
 .hero-title em, .section-title em { color: var(--primary); font-style: normal; }
@@ -113,3 +84,93 @@ button { color: inherit; font: inherit; }
 @media (max-width:680px) { .blog-header { padding-inline:1.5rem; }.blog-header .blog-back { display:none; }.blog-header .blog-donate { margin-left:auto; }.blog-hero { display:block; padding:5.5rem 1.5rem 4rem; }.blog-hero > p:last-child { margin-top:2.5rem; }.topic-nav { gap:.8rem 1.2rem; padding-inline:1.5rem; }.featured-story { display:block; padding:4rem 1.5rem; }.featured-copy { padding-top:2rem; }.story-section { padding:4rem 1.5rem; }.story-grid { display:block; }.story-card { margin-bottom:3rem; }.blog-subscribe { display:block; padding:4rem 1.5rem; }.blog-subscribe h2 { margin:1rem 0 2rem; }.blog-subscribe form { margin-top:2rem; } }
 .story-article-head { max-width:920px; margin:0 auto; padding:4rem 6vw 2rem; }.story-article-head h1 { max-width:900px; margin:1rem 0 1.5rem; font:700 clamp(3rem,7vw,7rem)/.92 'Montserrat'; letter-spacing:-.08em; }.story-dek { max-width:550px; color:var(--muted-foreground); font-size:1.25rem; }.story-article-image { max-width:1440px; height:min(62vw,680px); margin:0 auto; overflow:hidden; border-radius: 12px; }.story-article-image img { width:100%; height:100%; object-fit:cover; }.story-body { max-width:680px; margin:0 auto; padding:3rem 1.5rem 6rem; }.story-body p { margin:0 0 1.5rem; color:var(--muted-foreground); font-size:1.15rem; line-height:1.7; }.story-body .text-link { margin-top:2rem; color:var(--foreground); }
 @media (max-width:680px) { .story-article-head { padding:5.5rem 1.5rem 3rem; }.story-article-head h1 { font-size:clamp(2.8rem,13vw,4.8rem); }.story-dek { font-size:1.05rem; }.story-article-image { height:68vw; }.story-body { padding:3rem 1.5rem 5rem; } }
+.blog-card:hover .blog-card-img { transform: scale(1.05) !important; }
+.blog-card:hover .blog-card-title { color: var(--accent) !important; }
+</style>
+
+<main class="blog-page">
+  <section class="blog-hero">
+    <div>
+      <p class="eyebrow">WORLD HUNGER TEAM / INITIATIVES</p>
+      <h1>Combating<br /><em>world hunger.</em></h1>
+    </div>
+    <p>Explore our latest initiatives, simplified hydroponic growing systems, and the people bringing immediate relief to communities worldwide.</p>
+  </section>
+
+  <nav class="topic-nav" aria-label="Filter stories">
+    <button class="active">ALL INITIATIVES</button>
+    <button>HOME GROWING UNITS</button>
+    <button>RAINWATER HARVESTING</button>
+    <button>DOMESTIC FOOD SYSTEMS</button>
+  </nav>
+
+  <article class="featured-story">
+    <div class="story-image">
+      <img src="https://lightpink-jellyfish-915487.hostingersite.com/wp-content/uploads/2026/08/CURRENT.jpeg" alt="" />
+    </div>
+    <div class="featured-copy">
+      <p class="eyebrow">HOME GROWING UNITS / August 26, 2026</p>
+      <h2>Indoor Grow Tent</h2>
+      <p>A compact, efficient solution for families to grow their own food year-round, regardless of weather conditions.</p>
+      <a class="text-link" href="https://lightpink-jellyfish-915487.hostingersite.com/blog-page/">Read story <span>↗</span></a>
+    </div>
+  </article>
+
+  <section class="story-section">
+    <div class="story-section-head">
+      <p class="eyebrow">THE JOURNAL</p>
+      <p>5 stories</p>
+    </div>
+    <div class="story-grid">
+      <article class="story-card">
+        <div class="card-image"><img src="https://lightpink-jellyfish-915487.hostingersite.com/wp-content/uploads/2026/08/VISION.jpg" alt="" /></div>
+        <div class="card-copy">
+          <p class="eyebrow">HOME GROWING UNITS / August 20, 2026</p>
+          <h3>"She Shed" Backyard Garden</h3>
+          <p>Transforming small backyard spaces into highly productive, easy-to-maintain personal gardens.</p>
+          <a href="https://lightpink-jellyfish-915487.hostingersite.com/blog-page/" aria-label="Read &quot;She Shed&quot; Backyard Garden">Read story <span>↗</span></a>
+        </div>
+      </article>
+
+      <article class="story-card">
+        <div class="card-image"><img src="https://worldhungerteam.com/wp-content/uploads/2025/12/WhatsApp-Image-2025-12-30-at-1.02.12-AM.jpeg" alt="" /></div>
+        <div class="card-copy">
+          <p class="eyebrow">RAINWATER HARVESTING / August 15, 2026</p>
+          <h3>Home Harvester</h3>
+          <p>Simple, effective rainwater catchment systems for residential use, turning rain into a reliable resource.</p>
+          <a href="https://lightpink-jellyfish-915487.hostingersite.com/blog-page/" aria-label="Read Home Harvester">Read story <span>↗</span></a>
+        </div>
+      </article>
+
+      <article class="story-card">
+        <div class="card-image"><img src="https://worldhungerteam.com/wp-content/uploads/2025/12/klfqBYr7nGziwZTjQJMGzuYOzv4.png" alt="" /></div>
+        <div class="card-copy">
+          <p class="eyebrow">RAINWATER HARVESTING / August 10, 2026</p>
+          <h3>Commercial Harvester</h3>
+          <p>Large-scale water catchment solutions designed for community gardens and agricultural cooperatives.</p>
+          <a href="https://lightpink-jellyfish-915487.hostingersite.com/blog-page/" aria-label="Read Commercial Harvester">Read story <span>↗</span></a>
+        </div>
+      </article>
+
+      <article class="story-card">
+        <div class="card-image"><img src="https://worldhungerteam.com/wp-content/uploads/2025/12/WhatsApp-Image-2025-12-30-at-1.03.08-AM.jpeg" alt="" /></div>
+        <div class="card-copy">
+          <p class="eyebrow">DOMESTIC FOOD SYSTEMS / August 5, 2026</p>
+          <h3>Indoor Community Garden</h3>
+          <p>Bringing communities together to grow food collaboratively in repurposed indoor spaces.</p>
+          <a href="https://lightpink-jellyfish-915487.hostingersite.com/blog-page/" aria-label="Read Indoor Community Garden">Read story <span>↗</span></a>
+        </div>
+      </article>
+
+      <article class="story-card">
+        <div class="card-image"><img src="https://lightpink-jellyfish-915487.hostingersite.com/wp-content/uploads/2026/08/MISSION.jpg" alt="" /></div>
+        <div class="card-copy">
+          <p class="eyebrow">DOMESTIC FOOD SYSTEMS / August 1, 2026</p>
+          <h3>Walipini Underground Garden</h3>
+          <p>An innovative, climate-resilient approach to year-round farming using subterranean greenhouses.</p>
+          <a href="https://lightpink-jellyfish-915487.hostingersite.com/blog-page/" aria-label="Read Walipini Underground Garden">Read story <span>↗</span></a>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
